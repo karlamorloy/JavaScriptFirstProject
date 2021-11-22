@@ -1,0 +1,116 @@
+/*lista de colores */
+$colores:
+blueviolet,
+white,
+violet,
+black,
+crimson,
+#212529;
+
+$standard-width: 200px;
+$fuente: 'Oswald', sans-serif;
+
+@mixin Conf-Imagenes($bg-size, $bg-position, $margin-top) {
+    background-size: $bg-size;
+    background-position: $bg-position;
+    margin-top: $margin-top;
+}
+
+@mixin Conf-Fuentes($font, $font-size, $text-decoration, $text-transform, $spacing, $weight, $color) {
+    font-family: $font;
+    font-size: $font-size;
+    text-decoration: $text-decoration;
+    text-transform: $text-transform;
+    letter-spacing: $spacing;
+    font-weight: $weight;
+    color: $color;
+}
+
+@keyframes changeTittleColor{
+    0%{
+        color: black;
+    }
+    50%{
+        color: blueviolet;
+        font-size: 77px;
+    }
+    100%{
+        color: crimson;
+    }
+}
+
+.titulo{
+    @include Conf-Fuentes ($fuente, 80px, none, uppercase, 0px, bold, nth($colores,4));
+    &:hover{
+        animation: changeTittleColor 3s;
+    } 
+    display:flex;
+    justify-content: center;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.subtitulo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: black;
+    margin: 3rem 2rem 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.GridContainer{
+    margin: 2rem auto;
+    max-width: calc(100% - 80px);
+}
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.imagenCard{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+
+.expenseTypeGridItem{
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: 0.3s;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expenseTypeGridItem:hover{
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123,0.2);
+    cursor: pointer;
+}
+
+.tituloExpenseType{
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 1.1rem;
+}
+
+.linkToTrack{
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    color: black;
+    padding-bottom: 2rem;
+}
+
+.linkToTrack:hover{
+    color: blueviolet;
+}

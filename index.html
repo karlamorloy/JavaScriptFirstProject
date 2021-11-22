@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!--Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Fuente Oswald-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+    <!--Metaetiquetas-->
+
+    <meta name="description" content="Pianel es un expense tracker o controlador de gastos para emprendimientos, donde vas a poder ir registrando los gastos que vayas haciendo y compararlos con todos los ingresos de tu dinero para saber exactamente cuanto es tu ganancia real, si estas siendo rentable">
+
+    <meta name="keywords" content="Expense tracker, control de gastos, emprendedores, emprendimiento">
+
+    <title>Pianel: manten el control de los gastos de tu emprendimiento</title>
+</head>
+
+<body>
+
+
+
+    <h2 class="titulo">Pianel</h1>
+    <h1 class="subtitulo">Lleva las finanzas de tu negocio como un experto pero sin tantas complicaciones</h2>
+
+        <!--
+    <Section class="GridContainer">
+
+        <div class="cards-container">
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="" alt="" class="imagenCard"></a>
+                <h3 class="tituloExpenseType">Expense Type 1</h3>
+                <a href="" class="linkToTrack">Log expense</a>
+            </div>
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="" alt="" class="imagenCard"></a>
+                <h3 class="tituloExpenseType">Expense Type 2</h3>
+                <a href="" class="linkToTrack">Log expense</a>
+            </div>
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="" alt="" class="imagenCard"></a>
+                <h3 class="tituloExpenseType">Expense Type 3</h3>
+                <a href="" class="linkToTrack">Log expense</a>
+            </div>
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="" alt="" class="imagenCard"></a>
+                <h3 class="tituloExpenseType">Expense Type 4</h3>
+                <a href="" class="linkToTrack">Log expense</a>
+            </div>
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="" alt="" class="imagenCard"></a>
+                <h3 class="tituloExpenseType">Expense Type 5</h3>
+                <a href="" class="linkToTrack">Log expense</a>
+            </div>
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="" alt="" class="imagenCard"></a>
+                <h3 class="tituloExpenseType">Expense Type 6</h3>
+                <a href="" class="linkToTrack">Log expense</a>
+            </div>
+        </div>
+
+                  
+
+    </Section>
+    -->
+
+    <Section class="GridContainer">
+
+        <div class="cards-container">
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="https://cdn.business2community.com/wp-content/uploads/2016/12/top-10-passive-income-ideas-2016.jpg" alt="" class="imagenCard"></a>
+                <p>Ingresos de dinero</p>
+                <form id="incomeForm">
+                    Tipo de ingreso: 
+                       <input type = "text" name = "income_name" value = "" id="income"/>
+                       <br/>
+                       
+                    Monto de ingreso: 
+                       <input type = "number" name = "income_amount" value = "" id="incomeAmount" />
+                       <br/>
+
+                    Fecha de ingreso:
+                    <input type = "date" name = "income_date" value = "" id="incomeDate" />
+                    <br/>
+                    <input type = "submit" value = "Submit" id="submitBtn"/>
+                 </form>
+            </div>
+
+            <div class="expenseTypeGridItem">
+                <a href="" class="linkToTrack"><img src="https://i.ibb.co/f8fPPSL/expenses.jpg" alt="" class="imagenCard"></a>
+                <p>Egresos de dinero</p>
+                <form id="expenseForm">
+                    Tipo de engreso: 
+                       <input type = "text" name = "expense_name" value = "" id="expense"/>
+                       <br/>
+                       
+                    Monto de egreso: 
+                       <input type = "number" name = "expense_amount" value = "" id="expenseAmount" />
+                       <br/>
+
+                    Fecha de egreso:
+                    <input type = "date" name = "expense_date" value = "" id="expenseDate" />
+                    <br/>
+                    <input type = "submit" value = "Submit" id="submitBtn"/>
+                </form>
+            </div>     
+        </div>
+
+    </Section>
+
+    <Section class="GridContainer">
+
+        <div class="cards-container">
+
+            <div class="expenseTypeGridItem" id="newIncome">
+            </div>
+
+            <div class="expenseTypeGridItem" id="newExpense">
+            </div> 
+
+        </div>
+
+    </Section>
+
+    <Section class="GridContainer">
+
+        <div class="cards-container">
+
+            <div class="expenseTypeGridItem" id="incomeTotal">
+            </div>
+
+            <div class="expenseTypeGridItem" id="expenseTotal">
+            </div> 
+
+        </div>
+
+    </Section>
+
+    <div>
+        <p class="balance" id="balance">
+
+        </p>
+    </div>
+
+
+   <script src=js/index.js></script>
+</body>
+</html>
+
